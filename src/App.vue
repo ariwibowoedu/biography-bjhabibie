@@ -1,49 +1,35 @@
 <script setup>
 import { ref } from "vue";
 
-const profile = "Ari Wibowo";
+const profile = {
+  name: "B.J. Habibie",
+  role: "Bapak Teknologi Indonesia.",
+};
 const timeline = [
-  { year: 1999, event: "Kelahiran di Lampung, Indonesia." },
+  { year: 1936, event: "Born in Parepare. Indonesia" },
   {
-    year: 1910,
-    event: "Menyelesaikan sekolah dasar di MIN 3 Lampung Barat.",
-  },
-  {
-    year: 2014,
+    year: 1965,
     event:
-      "Menyelesaikan sekolah menengah Pertama di Madrasah Tsanawiyah Darush sholihin Lampung Barat.",
+      "Pursued higher education in engineering. from Bandung Institute of Technology (ITB). then specialized in aerospace engineering in Germany.",
   },
   {
-    year: 2017,
+    year: 1974,
     event:
-      "Menyelesaikan sekolah menengah Atas di Madrasah Aliyah Darus sholihin Lampung Barat.",
+      "Returned to Indonesia and was tasked by President Soeharto with building the nation's advanced technology sector.",
   },
   {
-    year: 2017,
-    event: "Admin penjualan | Handala Sweet Ice Cream Depok.",
-  },
-  {
-    year: 2018,
+    year: 1978,
     event:
-      "Satuan Pengamanan | PT. Bhawata Nusa Surya Perdana | client(PT. Bank Central Asia).",
+      "Served as the Minister of Research and Technology, where he played a key role in advancing Indonesia's technological capabilities.",
   },
   {
-    year: 2020,
+    year: 1998,
+    event: "Became the third President of Indonesia.",
+  },
+  {
+    year: 2019,
     event:
-      "Satuan Pengamanan | PT. Garda Utama Nasional | client(PT. Bank Central Asia).",
-  },
-  {
-    year: 2024,
-    event:
-      "Full Stack Web Developer (magang) | CV. Krista Artha Sentosa (fit place).",
-  },
-  {
-    year: 2025,
-    event: "Menyelesaikan studi S1 Sistem Informasi di Universitas Terbuka.",
-  },
-  {
-    year: 2025,
-    event: "Junior Financial Consultant | Royal Trust Futures.",
+      "Died on September 11, 2019, leaving behind a legacy of technological advancement and national development.",
   },
 ];
 </script>
@@ -52,30 +38,33 @@ const timeline = [
   <header
     class="w-full text-center p-10 bg-gradient-to-r from-slate-800 to-gray-700 text-white"
   >
-    <h1 class="text-4xl font-extrabold mb-2">{{ profile }}</h1>
-    <p class="text-lg font-medium italic">Web Dev</p>
+    <h1 class="text-4xl font-extrabold mb-2">{{ profile.name }}</h1>
+    <p class="text-lg font-medium italic">{{ profile.role }}</p>
   </header>
   <main class="p-8 space-y-8">
     <figure class="flex flex-col items-center text-center">
       <img
         class="rounded-xl shadow-md mb-4 border"
         width="200"
-        src="/images/profile_ariwibowo.webp"
+        src="/images/b.j.habibie.jpg"
         alt="presiden soekarno"
       />
       <figcaption class="text-sm text-gray-400">
-        Oleh -
+        Oleh Office of the Vice PresidentThe Republic of Indonesia -
         <a
-          target="_blank"
-          class="external text"
-          href="https://instagram.com/aariiwiiboowoo"
-          >@aariiwiiboowoo
-        </a>
+          rel="nofollow"
+          class="external free"
+          href="https://www.wapresri.go.id/zoobicon/2015/09/DDI_5965.jpg"
+          >https://www.wapresri.go.id/zoobicon/2015/09/DDI_5965.jpg</a
+        >, Domain Publik,
+        <a href="https://commons.wikimedia.org/w/index.php?curid=73334378"
+          >Pranala</a
+        >
       </figcaption>
     </figure>
     <section id="tribute-info">
       <h2 class="text-2xl font-bold text-center mb-6">
-        Linimasa kehidupan {{ profile }}
+        Time Line of {{ profile.name }}
       </h2>
       <ul
         class="space-y-4 border-l-4 border-red-500 pl-6 max-w-2xl mx-auto text-justify"
@@ -86,6 +75,15 @@ const timeline = [
       </ul>
     </section>
     <footer class="text-center pt-6 border-t mt-6">
+      <p class="text-gray-500 text-bold font-medium">
+        Read more his story on
+        <a
+          href="https://id.wikipedia.org/wiki/B.j.habibie"
+          target="_blank"
+          class="text-blue-400 hover:underline"
+          >Wikipedia</a
+        >.
+      </p>
       <p class="text-gray-400 text-md font-light">
         Made with ❤️ . by
         <a
